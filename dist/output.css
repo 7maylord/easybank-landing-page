@@ -630,6 +630,10 @@ video {
   max-width: 32rem;
 }
 
+.max-w-6xl{
+  max-width: 72rem;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -848,7 +852,17 @@ nav ul{
     flex-direction: row;
     gap: 2rem;
   }
+}
 
+nav ul li {
+  position: relative;
+}
+
+nav ul li button{
+  position: relative;
+}
+
+@media (min-width: 1024px){
   nav ul li button{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -858,10 +872,26 @@ nav ul{
   }
 }
 
-.btn {
-  background-image: linear-gradient(
-        90deg, hsl(136, 65%, 51%),hsl(192, 70%, 51%)
-    );
+nav ul li button {
+  padding-bottom: 10px;
+}
+
+.header-nav-btn:hover::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: -1;
+  background: linear-gradient(117deg, hsl(136, 65%, 51%)0%, hsl(192, 70%, 51%)100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  transform: scaleX(1);
+}
+
+.btn{
   border-radius: 9999px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -869,7 +899,21 @@ nav ul{
   padding-right: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity))
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background: linear-gradient(
+        117deg, hsl(136, 65%, 51%)0%,hwb(192 17% 15%)100%
+    );
+}
+
+.btn:hover{
+  background: hsl(192, 70%, 80%);
+  background: linear-gradient(
+        117deg, hsl(136, 65%, 80%)0%,hsl(192, 70%, 51%));
+}
+
+.article-title:hover {
+  color: hsl(136, 65%, 51%);
+  transition: color 0.3s ease;
 }
 
 h2{
@@ -923,6 +967,21 @@ footer {
   background-color: hsl(233, 26%, 24%);
 }
 
+.icon-img {
+  transition: filter 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-img:hover {
+  filter: invert(45%) sepia(100%) saturate(700%) hue-rotate(80deg) brightness(90%) contrast(90%);
+}
+
+.footer-list:hover{
+  color: hsl(136, 65%, 51%);
+  transition: color 0.3s ease;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -951,6 +1010,10 @@ footer {
 
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:place-content-center{
+    place-content: center;
   }
 
   .md\:items-start{
@@ -988,6 +1051,14 @@ footer {
     margin-top: 5rem;
   }
 
+  .lg\:ml-5{
+    margin-left: 1.25rem;
+  }
+
+  .lg\:ml-8{
+    margin-left: 2rem;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -1004,8 +1075,29 @@ footer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:items-start{
+    align-items: flex-start;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .lg\:gap-8{
+    gap: 2rem;
+  }
+
+  .lg\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .lg\:text-left{
     text-align: left;
+  }
+
+  .lg\:text-right{
+    text-align: right;
   }
 
   .lg\:text-base{
@@ -1015,6 +1107,30 @@ footer {
 }
 
 @media (min-width: 1280px){
+  .xl\:ml-8{
+    margin-left: 2rem;
+  }
+
+  .xl\:ml-10{
+    margin-left: 2.5rem;
+  }
+
+  .xl\:ml-1{
+    margin-left: 0.25rem;
+  }
+
+  .xl\:ml-80{
+    margin-left: 20rem;
+  }
+
+  .xl\:ml-40{
+    margin-left: 10rem;
+  }
+
+  .xl\:ml-20{
+    margin-left: 5rem;
+  }
+
   .xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
