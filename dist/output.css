@@ -630,10 +630,6 @@ video {
   max-width: 32rem;
 }
 
-.max-w-6xl{
-  max-width: 72rem;
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1012,18 +1008,6 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:place-content-center{
-    place-content: center;
-  }
-
-  .md\:items-start{
-    align-items: flex-start;
-  }
-
-  .md\:justify-start{
-    justify-content: flex-start;
-  }
-
   .md\:gap-8{
     gap: 2rem;
   }
@@ -1036,10 +1020,6 @@ footer {
   .md\:text-center{
     text-align: center;
   }
-
-  .md\:text-right{
-    text-align: right;
-  }
 }
 
 @media (min-width: 1024px){
@@ -1049,14 +1029,6 @@ footer {
 
   .lg\:mt-20{
     margin-top: 5rem;
-  }
-
-  .lg\:ml-5{
-    margin-left: 1.25rem;
-  }
-
-  .lg\:ml-8{
-    margin-left: 2rem;
   }
 
   .lg\:block{
@@ -1083,15 +1055,6 @@ footer {
     justify-content: flex-start;
   }
 
-  .lg\:gap-8{
-    gap: 2rem;
-  }
-
-  .lg\:px-5{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .lg\:text-left{
     text-align: left;
   }
@@ -1109,26 +1072,6 @@ footer {
 @media (min-width: 1280px){
   .xl\:ml-8{
     margin-left: 2rem;
-  }
-
-  .xl\:ml-10{
-    margin-left: 2.5rem;
-  }
-
-  .xl\:ml-1{
-    margin-left: 0.25rem;
-  }
-
-  .xl\:ml-80{
-    margin-left: 20rem;
-  }
-
-  .xl\:ml-40{
-    margin-left: 10rem;
-  }
-
-  .xl\:ml-20{
-    margin-left: 5rem;
   }
 
   .xl\:grid-cols-4{
